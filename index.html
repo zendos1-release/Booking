@@ -23,9 +23,23 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
 
+    /* --- Header with Icon + Title --- */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 1rem;
+    }
+
+    .header img {
+      width: 70px;
+      height: 70px;
+      border-radius: 16px;
+    }
+
     h1 {
       font-size: 2rem;
-      margin-bottom: 0.2rem;
+      margin: 0;
     }
 
     h2 {
@@ -46,6 +60,25 @@
       text-decoration: underline;
     }
 
+    /* --- Screenshots Section --- */
+    .screenshots {
+      margin-top: 2.5rem;
+    }
+
+    .screenshot-row {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding-top: 10px;
+    }
+
+    .screenshot-row img {
+      height: 200px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+      flex-shrink: 0;
+    }
+
     footer {
       margin-top: 3rem;
       font-size: 0.9rem;
@@ -57,32 +90,49 @@
 
 <body>
   <div class="container">
-    
-    <h1>BookPal</h1>
+
+    <!-- APP ICON + TITLE -->
+    <div class="header">
+      <img src="images/logo.png" alt="BookPal App Icon">
+      <h1>BookPal</h1>
+    </div>
+
     <p>An app for people who like books.</p>
-    <p>BookPal is a reading companion running on Google Books API. You can use it to search for a book and add it to your reading list. While you read you can track your bookmarks or add some notes to keep track of your thoughts. Or you could add a review or a rating for a book you've just finished.</p>
 
-    <p>Over time BookPal will help you to keep track of what you've read, how it made you feel and whether you liked it or not. The app has various features for sorting and filtering your reading list, for adding books you'd like to read or just searching for books, to see what you want to read.</p>
+    <p>
+      BookPal is a reading companion running on Google Books API.
+      You can use it to search for a book and add it to your reading list.
+      While you read you can track your bookmarks or add some notes.
+    </p>
 
-    <p>Use the app whatever way works for you. And reach out to us if you have any thoughts or feedback. Enjoy.</p>
+    <p>
+      Over time BookPal will help you keep track of what you've read,
+      how it made you feel and whether you liked it or not.
+    </p>
+
+    <p>
+      Use the app whatever way works for you.
+      And reach out if you have any thoughts or feedback.
+      Enjoy.
+    </p>
 
     <!-- SUPPORT SECTION -->
     <h2>Support & Contact</h2>
+    <p>If you need help or have any questions, please contact us at:</p>
     <p>
-      If you need help or have any questions, please contact us at:
-    </p>
-    <p>
-      📧 <a href="mailto:bookpalinfo@gmail.com">bookpalinfo@gmail.com</a>
+      <a href="mailto:bookpalinfo@gmail.com">bookpalinfo@gmail.com</a>
     </p>
 
     <!-- PRIVACY POLICY SECTION -->
     <h2>Privacy Policy</h2>
     <p>
-      Your privacy is important. This app does not collect any personally identifiable information.
+      Your privacy is important. This app does not collect any personally
+      identifiable information.
     </p>
 
     <p>
-      The app uses Firebase Analytics to collect usage data only. The collected data is entirely anonymous. We use this data to know what app features are used so we know what works and what doesn't.
+      The app uses Firebase Analytics to collect anonymous usage data only.
+      This helps us understand what features are being used.
     </p>
 
     <p>
@@ -93,7 +143,18 @@
       If you have questions about this policy, you can contact us at the email above.
     </p>
 
-    
+    <!-- SCREENSHOTS SECTION -->
+    <div class="screenshots">
+      <h2>Screenshots</h2>
+
+      <div class="screenshot-row">
+        <img src="images/screenshot1.png" alt="Screenshot 1">
+        <img src="images/screenshot2.png" alt="Screenshot 2">
+        <img src="images/screenshot3.png" alt="Screenshot 3">
+        <img src="images/screenshot4.png" alt="Screenshot 4">
+        <img src="images/screenshot5.png" alt="Screenshot 5">
+      </div>
+    </div>
 
     <footer>
       © <span id="year"></span> BookPal. All rights reserved.
@@ -102,7 +163,6 @@
   </div>
 
   <script>
-    // Auto-update year in footer
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
